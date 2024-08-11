@@ -1,25 +1,17 @@
-// scripts.js
-document.addEventListener('DOMContentLoaded', () => {
-    const factElement = document.getElementById('randomFact');
-    const newFactButton = document.getElementById('newFactButton');
-    
-    // Function to fetch a random knowable fact
-    function fetchRandomFact() {
-        const randomNum = Math.floor(Math.random() * 1000) + 1; // Random number between 1 and 1000
-        fetch(`http://numbersapi.com/${randomNum}/trivia`)
-            .then(response => response.text())
-            .then(data => {
-                factElement.textContent = data;
-            })
-            .catch(error => {
-                console.error('Error fetching the fact:', error);
-                factElement.textContent = 'An error occurred. Please try again.';
-            });
-    }
+function generateFact() {
+    const factElement = document.getElementById('fact');
+    factElement.textContent = 'Loading...';
 
-    // Load a fact when the page loads
-    fetchRandomFact();
+    // Generate a random year between 1400 and 2023
+    const year = Math.floor(Math.random() * (2023 - 1400 + 1)) + 1400;
 
-    // Load a new fact when the button is clicked
-    newFactButton.addEventListener('click', fetchRandomFact);
-});
+    fetch(`http://numbersapi.com/${year}/year`)
+        .then(response => response.text())
+        .then(data => {
+            factElement.textContent = data;
+        })
+        .catch(error => {
+            factElement.textContent = 'Failed to load fact. Please try again.';
+            console.error('Error:', error);
+        });
+}
