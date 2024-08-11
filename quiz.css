@@ -1,0 +1,169 @@
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    /* set google font */
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0px;
+    background-color: #f4f4f4;
+}
+
+/* Navbar container */
+.navbar {
+    background-color: #333;
+    padding: 2vw 3vw; /* Padding based on viewport width for responsiveness */
+  }
+  
+  /* Navbar list style */
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Distribute space between the links */
+    width: 100%; /* Take full width of the container */
+  }
+  
+  /* Navbar items style */
+  .navbar-item {
+    flex: 1; /* Each item takes up equal space */
+    text-align: center; /* Center the text inside each item */
+  }
+  
+  /* Navbar links style */
+  .navbar-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3vw;
+    padding: 10vh; /* Font size based on viewport width for responsiveness */
+  }
+  
+  .navbar-item a:hover {
+    text-decoration: none; /* Underline on hover */
+  }
+  
+  /* Responsive design for larger screens */
+  @media (min-width: 1200px) {
+    .navbar {
+      padding: 1vw 1vw; /* Adjust padding for larger screens */
+    }
+  
+    .navbar-item a {
+      font-size: 1.2vw; /* Smaller font size for larger screens */
+    }
+  }
+
+
+
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#quiz {
+    margin-top: 20px;
+}
+
+.question {
+    background-color: #e8f4f8;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.answers {
+    list-style-type: none;
+    padding: 0;
+}
+
+.answers li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.answers li:hover {
+    background-color: #f0f0f0;
+}
+
+.selected {
+    background-color: #d4edda !important;
+}
+
+.correct {
+    background-color: #c3e6cb !important;
+}
+
+.incorrect {
+    background-color: #f8d7da !important;
+}
+
+#score {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#timer {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
